@@ -5,7 +5,7 @@ function createIcon() {
     tiles.setTilemap(tilemap`level1`);
     const start = tiles.getRandomTileByType(myTiles.tile2);
     const end = tiles.getRandomTileByType(myTiles.tile3)
-    const path = scene.aStar(start, end)
+    const path = scene.aStar(start, end, scene.PathType.EightWay)
 
     game.onUpdateInterval(1500, function() {
         const car = sprites.create(img`
@@ -94,7 +94,7 @@ function testPath() {
 
     let flag = false;
     controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
-        const res = scene.aStar(tiles.getTileLocation(0, 11), tiles.getTileLocation(0, 3), sprites.castle.tilePath5);
+        const res = scene.aStar(tiles.getTileLocation(0, 11), tiles.getTileLocation(0, 3), scene.PathType.EightWay, sprites.castle.tilePath5);
         const enemy = sprites.create(img`
             . . . . . . . . . . . . . . . .
             . . . . . . 6 6 6 6 . . . . . .

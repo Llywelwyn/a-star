@@ -13,7 +13,7 @@ scene.followPath(null, null)
 ## Example
 
 ```blocks
-let myPath = scene.aStar(tiles.getTileLocation(0, 0), tiles.getTileLocation(9, 7))
+let myPath = scene.aStar(tiles.getTileLocation(0, 0), tiles.getTileLocation(9, 7), scene.PathMovement.EightWay)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
