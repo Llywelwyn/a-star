@@ -1,7 +1,7 @@
 namespace scene {
     // Costs are scaled by 1000 so we can use integer math for the diagonal cost (~sqrt(2)).
     const ORTHOGONAL_COST = 1000;
-    const DIAGONAL_COST = 1414;
+    export let DIAGONAL_COST = 1414;
 
     export enum PathType {
         //% block="8-way"
