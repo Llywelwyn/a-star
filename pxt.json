@@ -1,5 +1,5 @@
 {
-    "name": "arcade-tilemap-a-star",
+    "name": "a-star",
     "version": "0.5.0",
     "description": "",
     "dependencies": {
